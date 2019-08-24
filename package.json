@@ -1,0 +1,27 @@
+{
+  "name": "modal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:all": "npm run build:dev && npm run build:prd",
+    "build:dev": "babel src -d lib --mode development",
+    "build:prd": "babel src -d lib --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabischima/study_modal.git"
+  },
+  "author": "Gabriela Schirmer Mauricio",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/gabischima/study_modal/issues"
+  },
+  "homepage": "https://github.com/gabischima/study_modal#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  }
+}
