@@ -1,12 +1,14 @@
 {
   "name": "modal",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is a test",
   "main": "index.js",
   "scripts": {
     "build:all": "npm run build:dev && npm run build:prd",
-    "build:dev": "babel src -d lib --mode development",
-    "build:prd": "babel src -d lib --mode production",
+    "build:dev": "webpack --config ./build/webpack.dev.js --progress",
+    "build:prd": "webpack --config ./build/webpack.prod.js --progress",
+    "serve:dev": "webpack-dev-server --config ./build/webpack.dev.js --progress --mode=development",
+    "serve:prd": "webpack-dev-server --config ./build/webpack.prod.js --progress -p --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +22,27 @@
   },
   "homepage": "https://github.com/gabischima/study_modal#readme",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5"
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^2.1.1",
+    "cssnano": "^4.1.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^5.0.0",
+    "postcss-loader": "^2.1.5",
+    "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.18.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": ">=3.1.11",
+    "webpack-merge": "^4.1.4"
   }
 }
