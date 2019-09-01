@@ -4,7 +4,6 @@ const webpack = require('webpack')
 
 module.exports = () => merge(base, {
   mode: 'development',
-  devtool: 'inline-source-map',
   output: {
     filename: 'gsm-modal.js'
   },
