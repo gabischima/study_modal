@@ -1,6 +1,6 @@
 {
   "name": "gsm-modal",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "this is a test",
   "main": "index.js",
   "scripts": {
