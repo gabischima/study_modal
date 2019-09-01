@@ -1,8 +1,7 @@
 {
   "name": "gsm-modal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "this is a test",
-  "main": "index.js",
   "scripts": {
     "build:all": "npm run build:dev && npm run build:prd",
     "build:dev": "webpack --config ./build/webpack.dev.js --progress",
