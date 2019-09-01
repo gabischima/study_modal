@@ -1,0 +1,93 @@
+[gsm-modal-image] {
+  cursor: pointer;
+}
+
+/* MODAL */
+
+.gsm-modal {
+  height: 0;
+  width: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gsm-modal._open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(5, 16, 23, 0.32);
+}
+
+.gsm-modal._open .gsm-modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 24px;
+  background-color: #EBF1F5;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out
+}
+.gsm-modal__close:hover {
+  background-color: #DFE9F0;
+}
+
+.gsm-modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.gsm-modal__content__arrow {
+  flex-shrink: 0;
+  background-color: #EBF1F5;
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out
+}
+.gsm-modal__content__arrow:hover {
+  background-color: #DFE9F0;
+}
+
+.gsm-modal__content__arrow._left {
+  margin-right: 12px;
+}
+
+.gsm-modal__content__arrow._right {
+  margin-left: 12px;
+}
+
+.gsm-modal__content__img {
+  max-width: 544px;
+  height: 544px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.gsm-modal__content__img img {
+  max-height: 100%;
+  border: 2px solid #EBF1F5;
+  box-shadow: 0 2px 6px 1px rgba(5, 16, 23, 0.2);
+}
