@@ -35,8 +35,8 @@ export default class GSMModal {
       })
 
       this.arrowLeft.addEventListener('click', () => {
-        for(var index = 0; index <= images.length; index++) {
-          if (images[index].getAttribute('gsm-modal-image') === this.currentImage) {
+        for(var index = 0; index < images.length; index++) {
+          if (images[index].getAttribute('gsm-modal-image') === this.modalImage.src) {
             var prev = index - 1
             if (prev < 0) {
               prev = images.length - 1
@@ -48,8 +48,8 @@ export default class GSMModal {
       })
 
       this.arrowRight.addEventListener('click', () => {
-        for(var index = 0; index <= images.length; index++) {
-          if (images[index].getAttribute('gsm-modal-image') === this.currentImage) {
+        for(var index = 0; index < images.length; index++) {
+          if (images[index].getAttribute('gsm-modal-image') === this.modalImage.src) {
             var next = index + 1
             if (next === images.length) {
               next = 0
@@ -98,11 +98,6 @@ export default class GSMModal {
 
   get modalImage () {
     return document.querySelector('.gsm-modal__content__img').getElementsByTagName('img')[0]
-  }
-
-  get currentImage () {
-    const parts = this.modalImage.src.split('/')
-    return parts[parts.length - 1]
   }
 
   get btnClose () {
