@@ -44,9 +44,11 @@
 
 .gsm-modal__content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 12px;
+  width: 100%;
+  max-width: 960px;
 }
 
 .gsm-modal__content__arrow {
@@ -75,6 +77,7 @@
   height: 544px;
   width: 100%;
   display: flex;
+  flex-shrink: 1;
   justify-content: center;
   align-items: center;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -88,6 +91,7 @@
 
 .gsm-modal__content__img img {
   max-height: 100%;
+  max-width: 100%;
   border: 2px solid #EBF1F5;
   box-shadow: 0 2px 6px 1px rgba(5, 16, 23, 0.2);
 }
