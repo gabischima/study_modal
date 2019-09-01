@@ -30,7 +30,7 @@ export default class GSMModal {
         })
       })
       document.addEventListener('click', (e) => {
-        if (!this.modal.classList.contains('_open') || this.modalContent.contains(e.target) || e.target.hasAttribute('gsm-modal-image')) return
+        if (!this.modal.classList.contains('_open') || (this.arrowLeft.contains(e.target) || this.arrowRight.contains(e.target) || this.modalImage.contains(e.target)) || e.target.hasAttribute('gsm-modal-image')) return
         this.close()
       })
 
