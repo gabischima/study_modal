@@ -1,9 +1,11 @@
 import '../style/modal.css';
+import { iconClose, iconArrowLeft, iconArrowRight } from './icons.js';
 
 let ModalInstance = null
 
 export default class GSMModal {
 	constructor() {
+
 		this.init()
 
 		if (!ModalInstance) {
@@ -25,10 +27,23 @@ export default class GSMModal {
 
     if (triggers) {
       this.addToDOM()
+
       triggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
+          e.preventDefault()
+          this.open()
         })
       })
+
+      document.addEventListener('click', (e) => {
+        if (!this.modal.classList.contains('_open')) return
+        if (e.target.hasAttribute('gsm-modal-trigger')) return
+        if (this.modalContent.contains(e.target)) return
+        this.close()
+      }, false);
+
+      this.btnClose.addEventListener('click', (e) => this.close())
+
     } else {
 			console.warn('Element [gsm-modal-trigger] was not found. Please, make sure the attribute has been set.')
     }
@@ -37,12 +52,35 @@ export default class GSMModal {
   addToDOM () {
     const modalWrapperElement = document.createElement('div')
 
-    const iconClose = '<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M14.1437801,12 L17.5784981,15.495589 C18.1690805,16.0966378 18.1348833,17.0386474 17.5021164,17.5996263 C16.8693496,18.1606052 15.8776291,18.1281221 15.2870467,17.5270733 L12,14.1817727 L8.71295325,17.5270733 C8.12237088,18.1281221 7.1306504,18.1606052 6.49788356,17.5996263 C5.86511673,17.0386474 5.83091947,16.0966378 6.42150185,15.495589 L9.85621991,12 L6.42150185,8.50441101 C5.83091947,7.90336219 5.86511673,6.96135259 6.49788356,6.40037369 C7.1306504,5.83939479 8.12237088,5.87187788 8.71295325,6.4729267 L12,9.81822731 L15.2870467,6.4729267 C15.8776291,5.87187788 16.8693496,5.83939479 17.5021164,6.40037369 C18.1348833,6.96135259 18.1690805,7.90336219 17.5784981,8.50441101 L14.1437801,12 L14.1437801,12 Z" id="Path" fill="#051017" fill-rule="nonzero"></path></svg>'
-    const modal = '<div class="gsm-modal" gsm-modal><div class="gsm-modal__close">' + iconClose + '</div><div class="gsm-modal__content" id="modalContent"><div class="gsm-modal__content__img"><img id="modalImg"></div></div></div>'
+    const modal = '<div class="gsm-modal"><div class="gsm-modal__close">' + iconClose + '</div><div class="gsm-modal__content"><div class="gsm-modal__content__arrow _left">' + iconArrowLeft + '</div><div class="gsm-modal__content__img"><img /></div><div class="gsm-modal__content__arrow _right">' + iconArrowRight + '</div></div></div>'
 
     modalWrapperElement.innerHTML = modal
 
     document.body.appendChild(modalWrapperElement)
+  }
+
+  open () {
+    this.modal.classList.add('_open')
+  }
+
+  close () {
+    this.modal.classList.remove('_open')
+  }
+
+  get modal () {
+    return document.querySelector('.gsm-modal')
+  }
+
+  get modalContent () {
+    return document.querySelector('.gsm-modal__content')
+  }
+
+  get modalImage () {
+    return document.querySelector('.gsm-modal__content__img').getElementsByTagName('img')
+  }
+
+  get btnClose () {
+    return document.querySelector('.gsm-modal__close')
   }
 }
 
