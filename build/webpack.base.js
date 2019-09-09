@@ -57,7 +57,10 @@ module.exports = {
     port: 8080
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      dry: true,
+      cleanOnceBeforeBuildPatterns: []
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
