@@ -67,7 +67,7 @@ export default class GSMModal {
 
   addToDOM () {
     const modalWrapperElement = document.createElement('div')
-    const modal = '<div class="gsm-modal"><div class="gsm-modal__close">' + iconClose + '</div><div class="gsm-modal__content"><div class="gsm-modal__content__arrow _left">' + iconArrowLeft + '</div><div class="gsm-modal__content__img"><img /></div><div class="gsm-modal__content__arrow _right">' + iconArrowRight + '</div></div></div>'
+    const modal = '<div class="gsm-modal"><div class="gsm-modal__close">' + iconClose + '</div><div class="gsm-modal__content"><div class="gsm-modal__content__arrow _left">' + iconArrowLeft + '</div><div class="gsm-modal__content__img"><img alt="" /></div><div class="gsm-modal__content__arrow _right">' + iconArrowRight + '</div></div></div>'
     modalWrapperElement.innerHTML = modal
     document.body.appendChild(modalWrapperElement)
   }
