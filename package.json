@@ -1,6 +1,6 @@
 {
   "name": "gsm-modal",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "this is a test",
   "scripts": {
     "build:all": "npm run build:dev && npm run build:prd",
