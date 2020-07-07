@@ -122,11 +122,6 @@ export default class GSMModal {
     return document.querySelector('.gsm-modal__content__img').getElementsByTagName('img')[0]
   }
 
-  fileName (str) {
-    const parts = str.split('/')
-    return parts[parts.length - 1]
-  }
-
   get btnClose () {
     return document.querySelector('.gsm-modal__close')
   }
