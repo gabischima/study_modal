@@ -1,7 +1,19 @@
 # modal_study
 Modal script for [personal](https://gabischima.github.io/) use. Let me know if you use it. (:
 
-## Getting started
+## Usage
+
+1. When using `<img>` add the attribute `[gsm-modal-image]` with the path to the larger image as it's value.
+   ``` html
+     <img src="path/to/thumbnail_image" gsm-modal-image="path/to/larger_image">
+   ```
+2. [Build](#build) the script
+3.  Add it to your project at the end of your `<body>`:
+    ```html
+      <script src="path/to/gsm-modal.min.js"></script>
+    ```
+
+## Installation
 
 1. Install [**Git**](https://www.git-scm.com);
 
@@ -53,4 +65,3 @@ Modal script for [personal](https://gabischima.github.io/) use. Let me know if y
   ```
   npm run build:all
   ```
-  
