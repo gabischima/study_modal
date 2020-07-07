@@ -40,12 +40,16 @@ export default class GSMModal {
       })
 
       document.addEventListener('keydown', e => {
-        // key left = 37
-        // key right = 39
-        if (e.keyCode == 37) {
-          this.goPrevious()
-        } else if (e.keyCode == 39) {
-          this.goNext()
+        if (this.modal.classList.contains('_open')) {
+          // key left = 37
+          // key right = 39
+          if (e.keyCode == 37) {
+            e.preventDefault()
+            this.goPrevious()
+          } else if (e.keyCode == 39) {
+            e.preventDefault()
+            this.goNext()
+          }
         }
       })
 
