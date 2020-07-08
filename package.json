@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabischima/study_modal.git"
+    "url": "git+https://github.com/gabischima/gsm-modal.git"
   },
   "author": "Gabriela Schirmer Mauricio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gabischima/study_modal/issues"
+    "url": "https://github.com/gabischima/gsm-modal/issues"
   },
-  "homepage": "https://github.com/gabischima/study_modal#readme",
+  "homepage": "https://github.com/gabischima/gsm-modal#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
