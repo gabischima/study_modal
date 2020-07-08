@@ -1,4 +1,4 @@
-# modal_study
+# gsm-modal
 Modal script for [personal](https://gabischima.github.io/) use. Let me know if you use it. (:
 
 ## Usage
@@ -22,12 +22,12 @@ Modal script for [personal](https://gabischima.github.io/) use. Let me know if y
 3. After the installations, clone this repository:
    - **[SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)**:
    ```
-   git clone git@github.com:gabischima/study_modal.git
+   git clone git@github.com:gabischima/gsm-modal.git
    ```
 
    - **HTTPS**:
    ```
-   git clone https://github.com/gabischima/study_modal.git
+   git clone https://github.com/gabischima/gsm-modal.git
    ```
 
 4. Go to the project root folder, and install all dependencies with:
