@@ -49,6 +49,7 @@
   padding: 0 12px;
   width: 100%;
   max-width: 960px;
+  height: calc(100% - 24px);
 }
 
 .gsm-modal__content__arrow {
@@ -73,8 +74,9 @@
 }
 
 .gsm-modal__content__img {
-  max-width: 544px;
+  max-width: 768px;
   height: 544px;
+  max-height: 100%;
   width: 100%;
   display: flex;
   flex-shrink: 1;
